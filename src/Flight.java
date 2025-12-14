@@ -1,31 +1,53 @@
-public class Passenger {
+public class Flight {
 
-    private String fullName;
-    private String passportNumber;
+    private String flightNumber;
+    private String origin;
+    private String destination;
+    private double price;
 
-    public Passenger(String fullName, String passportNumber) {
-        this.fullName = fullName;
-        this.passportNumber = passportNumber;
+    public Flight(String flightNumber, String origin, String destination, double price) {
+        this.flightNumber = flightNumber;
+        this.origin = origin;
+        this.destination = destination;
+        this.price = price;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFlightNumber() {
+        return flightNumber;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
     }
 
-    public String getPassportNumber() {
-        return passportNumber;
+    public String getOrigin() {
+        return origin;
     }
 
-    public void setPassportNumber(String passportNumber) {
-        this.passportNumber = passportNumber;
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public void displayInfo() {
-        System.out.println("Passenger: " + fullName +
-                " | Passport: " + passportNumber);
+        System.out.println("Flight " + flightNumber +
+                " | From: " + origin +
+                " | To: " + destination +
+                " | Price: " + price);
     }
 }
